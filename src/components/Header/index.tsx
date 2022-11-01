@@ -1,8 +1,8 @@
 function Header() {
   return (
-    <div className="mt-10">
-      <h1 className="text-red-500">hello</h1>
-    </div>
+    <header>
+      <h1 className="text-slate-500">hello</h1>
+    </header>
   );
 }
 

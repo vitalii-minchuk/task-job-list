@@ -1,7 +1,20 @@
-import Header from './components/Header';
+import { Route, Routes } from 'react-router-dom';
+
+import Layout from './components/Layout';
+import JobInfo from './pages/JobInfo';
+import JobList from './pages/JobList';
+import NotFound from './pages/NotFound';
 
 function App() {
-  return <div className="text-red-700">hello</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<JobList />} />
+        <Route path="/info" element={<JobInfo />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
