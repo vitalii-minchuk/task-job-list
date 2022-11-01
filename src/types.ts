@@ -1,5 +1,8 @@
 export type JobsState = {
   isLoading: boolean;
+  fetchError: string;
+  jobs: JobType[];
+  currentJob: JobType | null;
 };
 
 export type JobType = {

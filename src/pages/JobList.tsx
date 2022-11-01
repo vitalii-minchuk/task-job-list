@@ -1,21 +1,30 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import getData from '../api';
-import { JobType } from '../types';
+import JobCard from '../components/JobCard';
+
+import { useAppDispatch, useAppSelector } from '../hooks/reduxHooks';
+import { fetchJobs } from '../store/Slices/jobsSlice';
 
 function JobList() {
-  const [jobs, setJobs] = useState<JobType[] | null>(null);
+  const { jobs, isLoading } = useAppSelector((state) => state.jobs);
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
-    getData().then((res) => setJobs(res));
-  }, []);
+    dispatch(fetchJobs());
+  }, [dispatch]);
+
   return (
-    <div>
-      {jobs?.map((el) => (
-        <Link key={el.id} to="/info">
-          <p>{el.id}</p>
-        </Link>
-      ))}
-    </div>
+    <main>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          {jobs?.map((job) => (
+            <JobCard job={job} key={job.id} />
+          ))}
+        </div>
+      )}
+    </main>
   );
 }
 

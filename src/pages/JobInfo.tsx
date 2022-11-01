@@ -1,5 +1,11 @@
+import SmallMap from '../components/SmallMap';
+
 function JobInfo() {
-  return <div>hello</div>;
+  return (
+    <div>
+      <SmallMap />
+    </div>
+  );
 }
 
 export default JobInfo;

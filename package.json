@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.13.1",
     "@redux-saga/core": "^1.2.1",
     "@reduxjs/toolkit": "^1.8.6",
     "@types/redux-logger": "^3.0.9",
