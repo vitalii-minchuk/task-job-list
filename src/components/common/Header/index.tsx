@@ -2,7 +2,7 @@ import GitHubSvg from '../../../assets/svgs/GitHubSVG';
 
 function Header() {
   return (
-    <header className="w-full h-[60px] bg-gray-700 text-gray-300">
+    <header className="w-full h-[60px] bg-gray-700 text-gray-300 shadow-lg shadow-gray-700">
       <div className="my-container h-full flex justify-between items-center">
         <h2 className="text-2xl">task-job-list</h2>
         <button

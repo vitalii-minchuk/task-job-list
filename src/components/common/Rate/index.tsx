@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 
-import star from '../../../assets/images/star.png';
+import star from '../../../assets/svgs/star.svg';
 
 interface IRate {
   rate: number;
 }
+
 function Rate({ rate }: IRate) {
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
   const isStarSmall = currentWidth < 500;

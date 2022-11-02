@@ -1,10 +1,5 @@
-import {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+
 import SingleArrowSVG from '../../../assets/svgs/SingleArrowSVG';
 
 interface IPaginationProps {
