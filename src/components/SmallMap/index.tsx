@@ -3,22 +3,23 @@ import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 
 import mapStyles from './mapStyles';
 import LocationIcon from '../../assets/images/location-icon.png';
+import { LocationType } from '../../types';
 
-const containerStyle = {
-  width: '600px',
-  height: '400px',
-};
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-};
+interface ISmallMap {
+  location?: LocationType;
+}
 
-function SmallMap() {
+function SmallMap({ location }: ISmallMap) {
   const { isLoaded } = useLoadScript({
     language: 'en',
     id: 'google-map-script',
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });
+
+  const center = {
+    lat: location?.lat || 0,
+    lng: location?.long || 0,
+  };
 
   return (
     <div className="w-[600px] h-[380px] rounded-b-lg overflow-hidden">
@@ -29,7 +30,10 @@ function SmallMap() {
             disableDefaultUI: true,
             zoomControl: false,
           }}
-          mapContainerStyle={containerStyle}
+          mapContainerStyle={{
+            width: '600px',
+            height: '400px',
+          }}
           center={center}
           zoom={10}
         >
@@ -49,5 +53,12 @@ function SmallMap() {
     </div>
   );
 }
+
+SmallMap.defaultProps = {
+  location: {
+    lat: 0,
+    long: 0,
+  },
+};
 
 export default memo(SmallMap);

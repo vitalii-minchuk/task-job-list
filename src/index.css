@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.paginationUnderline {
+    @apply after:bg-[#55699E] after:content-[''] after:w-[24px] after:h-[1px] after:absolute after:bottom-[-10px] after:right-0 after:left-0 sm:after:w-[31px] sm:after:h-[3px]
+}
+
+.my-container {
+    @apply max-w-[1418px] px-[9px] mx-auto
+}
