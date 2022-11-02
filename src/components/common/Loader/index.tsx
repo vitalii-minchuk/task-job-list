@@ -1,7 +1,7 @@
 interface ILoader {
   type?: 'dark' | 'light';
 }
-function Loader({ type = 'dark' }: ILoader) {
+function Loader({ type }: ILoader) {
   return (
     <div className="flex items-center justify-center ">
       <div

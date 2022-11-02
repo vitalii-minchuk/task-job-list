@@ -9,3 +9,23 @@
 .my-container {
     @apply max-w-[1418px] px-[9px] mx-auto
 }
+
+.my-title {
+    @apply text-[#3A4562] font-bold text-[28px] leading-[34px] tracking-[0.413333px]
+}
+
+.my-subtitle {
+    @apply text-[#3A4562] font-bold text-[20px] leading-[25px] tracking-[-0.625px]
+}
+
+.my-btn-dark {
+    @apply w-[127px] h-[52px] transition-all bg-[#384564] hover:opacity-90 uppercase rounded-lg font-semibold text-sm leading-[16px] text-[#FFFFFF]
+}
+
+.my-btn-blue {
+    @apply bg-[#55699E]/30 transition-all border border-[#55699E]/30 hover:bg-[#55699E]/40 rounded-lg py-[12px] px-[30px] text-[18px] leading-[24px] tracking-[-0.457143px]
+}
+
+.my-btn-yellow {
+    @apply bg-[#FFCF00]/20 transition-all border border-[#FFCF00] hover:bg-[#FFCF00]/40 rounded-lg py-[12px] px-[30px] text-[#988B49] text-[18px] leading-[24px] tracking-[-0.457143px]
+}

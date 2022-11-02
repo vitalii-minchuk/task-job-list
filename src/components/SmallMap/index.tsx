@@ -22,7 +22,7 @@ function SmallMap({ location }: ISmallMap) {
   };
 
   return (
-    <div className="w-[600px] h-[380px] rounded-b-lg overflow-hidden">
+    <div className="w-full h-[400px] rounded-b-lg overflow-hidden">
       {isLoaded ? (
         <GoogleMap
           options={{
@@ -31,8 +31,8 @@ function SmallMap({ location }: ISmallMap) {
             zoomControl: false,
           }}
           mapContainerStyle={{
-            width: '600px',
-            height: '400px',
+            width: '100%',
+            height: '236px',
           }}
           center={center}
           zoom={10}

@@ -8,7 +8,7 @@ interface IRate {
 
 function Rate({ rate }: IRate) {
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
-  const isStarSmall = currentWidth < 500;
+  const isStarSmall = currentWidth < 640;
   const numberOfStars = Array(rate).fill('');
 
   useEffect(() => {
