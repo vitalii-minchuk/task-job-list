@@ -11,7 +11,7 @@ function JobList() {
     usePagination(jobs);
 
   return (
-    <main className="pb-[17px] pt-[40px] bg-[#F5F5F5] w-full h-screen sm:pt-[50px]">
+    <main className="pt-[40px] bg-[#F5F5F5] w-full sm:pt-[50px]">
       <div className="my-container">
         {isLoading ? (
           <div className="pt-16">

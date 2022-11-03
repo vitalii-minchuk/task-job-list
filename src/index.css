@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .paginationUnderline {
     @apply after:bg-[#55699E] after:content-[''] after:w-[24px] after:h-[1px] after:absolute after:bottom-[-10px] after:right-0 after:left-0 sm:after:w-[31px] sm:after:h-[3px]
 }
@@ -23,9 +28,9 @@
 }
 
 .my-btn-blue {
-    @apply bg-[#55699E]/30 transition-all border border-[#55699E]/30 hover:bg-[#55699E]/40 rounded-lg py-[12px] px-[30px] text-[18px] leading-[24px] tracking-[-0.457143px]
+    @apply bg-[#55699E]/30 transition-all border border-[#55699E]/30 hover:bg-[#55699E]/40 rounded-lg py-[16px] px-[30px] text-[16px] leading-[16px] tracking-[-0.457143px] lg:px-[50px]
 }
 
 .my-btn-yellow {
-    @apply bg-[#FFCF00]/20 transition-all border border-[#FFCF00] hover:bg-[#FFCF00]/40 rounded-lg py-[12px] px-[30px] text-[#988B49] text-[18px] leading-[24px] tracking-[-0.457143px]
+    @apply bg-[#FFCF00]/20 transition-all border border-[#FFCF00] hover:bg-[#FFCF00]/40 rounded-lg py-[16px] px-[20px] text-[#988B49] text-[16px] leading-[16px] tracking-[-0.457143px] lg:px-[50px]
 }
